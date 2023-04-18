@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Slider</title>
+
+
+	<a href='homepage.html' class="home-button">Home</a>
+
+	
+	<style>
+
+.home-button {
+  background-color:  #00ff0d;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+		body {
+  background-image: url("https://media.discordapp.net/attachments/1094100640625602622/1095204596911198208/background2.png?width=924&height=522");
+ 
+}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.image {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
+		.button {
+			padding: 10px 20px;
+			background-color:  #00ff0d;
+			color: black;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-right: 10px;
+		}
+		.button-green {
+			background-color:  #00ff0d;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="https://media.discordapp.net/attachments/1097640108871663796/1097917823617081465/ezgif.com-video-to-gif2.gif?width=390&height=522" class="image" id="image">
+		<button class="button button-green" onclick="previousImage()">Previous</button>
+		<button class="button button-green" onclick="nextImage()">Next</button>
+	</div>
+
+	<script>
+		var images = ["https://media.discordapp.net/attachments/1097640108871663796/1097917823617081465/ezgif.com-video-to-gif2.gif?width=390&height=522", "https://media.discordapp.net/attachments/1097640108871663796/1097942662100811846/ezgif.com-video-to-gif4.gif?width=390&height=522", 
+		"https://media.discordapp.net/attachments/1097640108871663796/1097944476464451715/ezgif.com-video-to-gif5.gif?width=390&height=522", 
+		"https://media.discordapp.net/attachments/1097640108871663796/1097953127157727385/ezgif.com-video-to-gif7.gif?width=390&height=522", 
+		"https://media.discordapp.net/attachments/1097640108871663796/1097953204794306560/ezgif.com-video-to-gif6.gif?width=390&height=522",
+	"image6.jpg",
+];
+		var currentImageIndex = 0;
+		var imageElement = document.getElementById("image");
+
+		function nextImage() {
+			currentImageIndex++;
+			if (currentImageIndex >= images.length) {
+				currentImageIndex = 0;
+			}
+			imageElement.src = images[currentImageIndex];
+		}
+
+		function previousImage() {
+			currentImageIndex--;
+			if (currentImageIndex < 0) {
+				currentImageIndex = images.length - 1;
+				}
+			imageElement.src = images[currentImageIndex];
+		}
+	</script>
+</body>
+</html>
+

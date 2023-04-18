@@ -1,0 +1,33 @@
+/* styles.css */
+
+/*
+body {
+  background-color: black;
+} */
+
+
+
+body {
+  background-image: url("https://media.discordapp.net/attachments/1094100640625602622/1095204596911198208/background2.png?width=924&height=522");
+ 
+}
+
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
